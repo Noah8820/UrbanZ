@@ -1,10 +1,13 @@
 Ruben:	Backend
 # urbanZ
 urbanZ should create a website for our imaginary clothing brand. The website should be operated with a frontend and backend.
-We have divided the work among ourselves as follows:
-Ilija:&nbspBackend
-Ruben:  Backend
-Noah:   Frontend
+We have divided the work among ourselves as follows:  
+
+Ilija:    Backend 
+
+Ruben:    Backend 
+
+Noah:     Frontend 
 
 ## Must-have goals:
 The website must be viewable and functional.
