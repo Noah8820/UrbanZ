@@ -2,6 +2,7 @@
 urbanZ should create a website for our imaginary clothing brand. The website should be operated with a frontend and backend.
 
 We have divided the work among ourselves as follows:
+
 Ilija: 	Backend
 Ruben:	Backend
 Noah: 	Frontend
