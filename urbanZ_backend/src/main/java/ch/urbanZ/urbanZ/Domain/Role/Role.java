@@ -1,5 +1,6 @@
 package ch.urbanZ.urbanZ.Domain.Role;
 
+import ch.urbanZ.urbanZ.Domain.Authority.Authority;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
