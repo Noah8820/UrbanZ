@@ -4,7 +4,7 @@ import defaultAxiosInstance from "../Components/Api";
 
 const DataService = (api: AxiosInstance = defaultAxiosInstance) => ({
   getData: async () => {
-    const { data } = await api.get("products");
+    const { data } = await api.get("urbanZ/");
     return data;
   },
   getOneData: async (id: number) => {
