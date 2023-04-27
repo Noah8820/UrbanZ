@@ -1,6 +1,6 @@
 INSERT INTO clothing (id, price, name, image, number) VALUES (1, 50, 'Pusher Bag', 'image', 3);
 
-INSERT INTO users (username, password) VALUES ('Noah', '1234');
+INSERT INTO users (username, password) VALUES ('noah@mail.com', '1234');
 INSERT INTO users (username, password) VALUES ('Ilija', '1234');
 INSERT INTO users (username, password) VALUES ('Schneebeli', '1234');
 
