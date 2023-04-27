@@ -1,6 +1,7 @@
 package ch.urbanZ.urbanZ.Domain.User;
 
 
+import ch.urbanZ.urbanZ.Domain.Role.RoleRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,49 +16,12 @@ import java.util.Collection;
 
 @Service
 @Log4j2
-public class UserService implements UserDetailsService {
+public class UserService {
     @Autowired
-    UserRepository repository;
+    UserRepository userRepository;
 
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return repository.findUserByUsername(username).map(UserDetailsImpl::new).orElseThrow(() -> new UsernameNotFoundException(username));
-    }
-
-    public record UserDetailsImpl(User user) implements UserDetails {
-        public Collection<? extends GrantedAuthority> getAuthorities() {
-            return user.getRuleSet().stream().flatMap(r -> r.getAuthoritySet().stream())
-                    .map(a -> new SimpleGrantedAuthority(a.getName()))
-                    .toList();
-        }
-
-        @Override
-        public String getPassword() {
-            return user.getPassword();
-        }
-
-        @Override
-        public String getUsername() {
-            return user.getUsername();
-        }
-
-        @Override
-        public boolean isAccountNonExpired() {
-            return true;
-        }
-
-        @Override
-        public boolean isAccountNonLocked() {
-            return true;
-        }
-
-        @Override
-        public boolean isCredentialsNonExpired() {
-            return true;
-        }
-
-        @Override
-        public boolean isEnabled() {
-            return true;
-        }
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 }
+

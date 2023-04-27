@@ -1,16 +1,13 @@
 package ch.urbanZ.urbanZ.Domain.Authority;
 
-import lombok.extern.log4j.Log4j2;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-@Log4j2
+@AllArgsConstructor
 public class AuthorityService {
     @Autowired
-    AuthorityRepository authorityRepository;
+    private final AuthorityRepository authorityRepository;
 
-    public AuthorityService(AuthorityRepository authorityRepository) {
-        this.authorityRepository = authorityRepository;
-    }
 }

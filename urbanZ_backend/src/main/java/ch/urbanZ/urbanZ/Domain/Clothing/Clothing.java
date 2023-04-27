@@ -27,7 +27,7 @@ public class Clothing {
     @Column(name = "image")
     private String image;
 
-    @Column(name = "Number")
+    @Column(name = "number")
     private int number;
 }
 
