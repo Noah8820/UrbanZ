@@ -19,8 +19,8 @@ public class User {
     @Column(name = "user_id")
     private int id;
 
-    @Column(name = "username")
-    private String username;
+    @Column(name = "email")
+    private String email;
 
     @Column(name = "password")
     private String password;
@@ -34,7 +34,7 @@ public class User {
 
     public User(User user) {
         this.id = user.getId();
-        this.username = user.getUsername();
+        this.email = user.getEmail();
     }
 
 }
