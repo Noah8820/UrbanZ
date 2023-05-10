@@ -6,10 +6,16 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
+import org.apache.catalina.User;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+@EnableJpaRepositories
+@EntityScan
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-    @Query("select u from User u where upper(u.username) = upper(?1)")
-    Optional<User> findUserByUsername(String username);
+    @Query("select u from User u where upper(u.email) = upper(?1)")
+    Optional<User> findUserByEmail(String email);
 }
 

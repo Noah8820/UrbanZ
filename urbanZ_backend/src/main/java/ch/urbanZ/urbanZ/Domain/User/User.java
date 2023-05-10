@@ -32,9 +32,5 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "id_role", referencedColumnName = "role_id"))
     private Set<Role> ruleSet;
 
-    public User(User user) {
-        this.id = user.getId();
-        this.email = user.getEmail();
-    }
 
 }

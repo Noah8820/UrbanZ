@@ -15,7 +15,7 @@ public class RegisterService {
         User user = new User();
         user.setEmail(userDto.getEmail());
         user.setPassword(userDto.getPassword());
-        registerRepository.save(user);
+        registerRepository.save(userDto);
     }
 }
 
