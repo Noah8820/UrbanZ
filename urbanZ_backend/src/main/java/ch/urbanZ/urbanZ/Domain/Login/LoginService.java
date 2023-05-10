@@ -12,7 +12,7 @@ public class LoginService {
     private LoginRepository loginRepository;
 
     public User loginUser(String email, String password) throws Exception {
-        User user = loginRepository.findByEmail(email);
+        User user = loginRepository.findByEmail(email );
         if (user == null || !user.getPassword().equals(password)) {
             throw new Exception("Invalid email or password");
         }
